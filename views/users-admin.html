@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f4f3ee">
+    <title>Usuarios | Agenda</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+   
+</head>
+
+<body class="phonebook-body">
+    <div class="phonebook-shell users-shell">
+        <aside class="phonebook-sidebar">
+            <a class="brand" href="../index.html" aria-label="Agenda, inicio">
+                <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+                agenda<span class="brand-period">.</span>
+            </a>
+
+            <nav class="phonebook-nav" aria-label="Navegación principal">
+                <a class="nav-item" href="notebook-admin.html">Agenda telefónica</a>
+                <a class="nav-item active" href="users-admin.html" aria-current="page">Usuarios</a>
+                <a class="nav-item" href="profile-admin.html">Mi perfil</a>
+                <button class="nav-item nav-logout" id="logout-button" type="button">Cerrar sesión</button>
+            </nav>
+
+            <div class="sidebar-summary users-sidebar-summary">
+                <p>Tu espacio</p>
+                <div class="summary-metric">
+                    <strong>Privado</strong>
+                    <span>Solo en este navegador</span>
+                </div>
+            </div>
+        </aside>
+
+        <main class="phonebook-main users-main">
+            <header class="users-page-header">
+                <div>
+                    <p class="phonebook-kicker">PANEL DE ADMINISTRACIÓN</p>
+                    <h1>Usuarios</h1>
+                    <p class="users-intro">Administra las cuentas que tienen acceso a tu agenda.</p>
+                </div>
+                <button class="phonebook-button phonebook-button--primary" id="open-user-dialog" type="button">
+                    <span aria-hidden="true">+</span> Nuevo usuario
+                </button>
+            </header>
+
+            <section class="users-list-panel" aria-labelledby="user-list-title">
+                <div class="users-list-heading">
+                    <div>
+                        <p class="phonebook-kicker">CUENTAS</p>
+                        <h2 id="user-list-title">Todos los usuarios <span class="user-count" id="user-count">0</span>
+                        </h2>
+                        <p id="user-summary">Usuarios registrados en tu agenda</p>
+                    </div>
+                    <label class="admin-search">
+                        <span class="search-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Buscar usuarios</span>
+                        <input id="user-search" type="search" placeholder="Buscar por nombre o correo..."
+                            autocomplete="off">
+                    </label>
+                </div>
+
+                <div class="user-table-wrap">
+                    <table class="user-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">USUARIO</th>
+                                <th scope="col">CORREO ELECTRÓNICO</th>
+                                <th scope="col">ESTADO</th>
+                                <th scope="col">ACCIONES</th>
+                            </tr>
+                        </thead>
+                        <tbody id="user-list">
+                        </tbody>
+                    </table>
+                    <div class="user-empty-state" id="user-empty-state" style="display: none;">
+                        <span class="empty-mark" aria-hidden="true">＋</span>
+                        <p id="empty-title">Todavía no hay usuarios</p>
+                        <span id="empty-description">Agrega una cuenta para verla en este listado.</span>
+                    </div>
+                </div>
+            </section>
+            <p class="users-footnote">Los datos de las cuentas se guardan en este navegador.</p>
+        </main>
+    </div>
+
+    <dialog class="user-dialog" id="user-dialog" aria-labelledby="dialog-title">
+        <form class="user-dialog-form" id="create-user-form">
+            <div class="dialog-heading">
+                <div>
+                    <p class="admin-eyebrow">NUEVA CUENTA</p>
+                    <h2 id="dialog-title">Agregar usuario</h2>
+                </div>
+                <button class="dialog-close" id="close-user-dialog" type="button" aria-label="Cerrar ventana">×</button>
+            </div>
+            <p class="dialog-description">Completa los datos para crear una cuenta nueva.</p>
+
+            <label class="dialog-field" for="new-user-name">
+                Nombre completo
+                <input id="new-user-name" name="name" type="text" placeholder="Ej. Mariana López" autocomplete="name"
+                    required>
+            </label>
+            <label class="dialog-field" for="new-user-email">
+                Correo electrónico
+                <input id="new-user-email" name="email" type="email" placeholder="nombre@correo.com"
+                    autocomplete="email" required>
+            </label>
+            <label class="dialog-field" for="new-user-password">
+                Contraseña temporal
+                <input id="new-user-password" name="password" type="password" placeholder="Mínimo 8 caracteres"
+                    autocomplete="new-password" minlength="8" required>
+            </label>
+            <p class="dialog-feedback" id="dialog-feedback" role="status" aria-live="polite"></p>
+            <div class="dialog-actions">
+                <button class="admin-secondary-button" id="cancel-user-dialog" type="button">Cancelar</button>
+                <button class="admin-primary-button" type="submit">Crear usuario <span
+                        aria-hidden="true">→</span></button>
+            </div>
+        </form>
+    </dialog>
+     <script defer type="module" src="../js/users-admin.js"></script>
+    <script type="module" src="../js/logout.js"></script>
+</body>
+
+</html>

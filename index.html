@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#f4f3ee">
+	<title>Agenda | Acceso</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<main class="auth-layout">
+		<section class="welcome-panel" aria-labelledby="welcome-title">
+			<a class="brand" href="#inicio" aria-label="Agenda, inicio">
+				<span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+				agenda<span class="brand-period">.</span>
+			</a>
+
+			<div class="welcome-copy" id="inicio">
+				<p class="eyebrow"><span class="eyebrow-dot"></span> TU ESPACIO, A TU RITMO</p>
+				<h1 id="welcome-title">Haz sitio para<br>lo que <em>importa.</em></h1>
+				<p class="welcome-description">Organiza tus días con calma. Tus planes, tus pendientes y tus ideas, todo
+					en su lugar.</p>
+
+				<div class="preview" aria-label="Vista previa de tus pendientes">
+					<div class="preview-header">
+						<div>
+							<span class="preview-label">HOY, CON CALMA</span>
+							<p class="preview-date">Una cosa a la vez.</p>
+						</div>
+						<span class="preview-count">03</span>
+					</div>
+					<div class="preview-task">
+						<span class="task-check task-check--done" aria-hidden="true">✓</span>
+						<span class="task-name task-name--done">Revisar el proyecto</span>
+						<span class="task-time">09:30</span>
+					</div>
+					<div class="preview-task">
+						<span class="task-check" aria-hidden="true"></span>
+						<span class="task-name">Pausa para un café</span>
+						<span class="task-time">11:00</span>
+					</div>
+					<div class="preview-task">
+						<span class="task-check" aria-hidden="true"></span>
+						<span class="task-name">Llamar a mamá</span>
+						<span class="task-time">16:15</span>
+					</div>
+				</div>
+			</div>
+
+			<p class="welcome-footer">MENOS RUIDO. MÁS TUYO.</p>
+		</section>
+
+		<section class="form-panel" aria-label="Acceso a tu cuenta">
+			<div class="form-wrap">
+				<div class="mobile-brand" aria-hidden="true">
+					<span class="brand-mark"><span></span><span></span><span></span><span></span></span>
+					agenda<span class="brand-period">.</span>
+				</div>
+				<p class="form-kicker">QUÉ BUENO VERTE POR AQUÍ</p>
+				<h2>Tu día empieza aquí.</h2>
+				<p class="form-intro">Entra a tu espacio personal o crea una cuenta nueva.</p>
+
+				<div class="auth-switch">
+					<input class="tab-input" type="radio" name="auth-tab" id="tab-login" checked>
+					<input class="tab-input" type="radio" name="auth-tab" id="tab-register">
+					<div class="tab-list" aria-label="Tipo de acceso">
+						<label class="tab-label tab-login" for="tab-login">Iniciar sesión</label>
+						<label class="tab-label tab-register" for="tab-register">Crear cuenta</label>
+					</div>
+
+					<div class="form-content">
+						<form class="auth-form login-form" id="user-login-form" method="post">
+							<div class="field">
+								<label for="login-email">Correo electrónico</label>
+								<input id="login-email" name="email" type="email" placeholder="tu@correo.com"
+									autocomplete="email" required>
+							</div>
+							<div class="field">
+								<div class="field-heading">
+									<label for="login-password">Contraseña</label>
+									<a class="text-link" href="#recuperar">¿La olvidaste?</a>
+								</div>
+								<input id="login-password" name="password" type="password" placeholder="Tu contraseña"
+									autocomplete="current-password" required>
+							</div>
+							<label class="remember-option" for="remember-me">
+								<input id="remember-me" name="remember" type="checkbox">
+								<span>Recordar mi sesión</span>
+							</label>
+							<button class="submit-button" type="submit">Entrar a mi agenda <span
+									aria-hidden="true">→</span></button>
+							<p class="form-bottom">¿Todavía no tienes cuenta? <label class="inline-tab-link"
+									for="tab-register">Regístrate</label></p>
+						</form>
+
+						<form class="auth-form register-form" id="user-registration-form" method="post">
+							<div class="field">
+								<label for="register-name">Nombre completo</label>
+								<input id="register-name" name="name" type="text" placeholder="¿Cómo te llamas?"
+									autocomplete="name" required>
+							</div>
+							<div class="field">
+								<label for="register-email">Correo electrónico</label>
+								<input id="register-email" name="email" type="email" placeholder="tu@correo.com"
+									autocomplete="email" required>
+							</div>
+							<div class="field">
+								<label for="register-password">Crea una contraseña</label>
+								<input id="register-password" name="password" type="password"
+									placeholder="Mínimo 8 caracteres" autocomplete="new-password" minlength="8"
+									required>
+							</div>
+							<button class="submit-button" type="submit">Crear mi cuenta <span
+									aria-hidden="true">→</span></button>
+							<p class="form-bottom">¿Ya tienes cuenta? <label class="inline-tab-link"
+									for="tab-login">Inicia sesión</label></p>
+						</form>
+					</div>
+				</div>
+				<p class="privacy-note"><span aria-hidden="true">✳</span> Tu información es tuya. Siempre.</p>
+			</div>
+		</section>
+	</main>
+
+	
+	<script type="module" src="/js/index.js" defer></script>
+
+</body>
+
+</html>

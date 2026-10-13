@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f4f3ee">
+    <title>Usuarios | Agenda</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="phonebook-body">
+    <div class="phonebook-shell">
+        <aside class="phonebook-sidebar">
+            <a class="brand" href="../index.html" aria-label="Agenda, inicio">
+                <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+                agenda<span class="brand-period">.</span>
+            </a>
+
+            <nav class="phonebook-nav" aria-label="Categorías de agenda">
+                <a class="nav-item active" href="notebook-admin.html" aria-current="page">Agenda telefónica</a>
+                <a class="nav-item" href="users-admin.html">Usuarios</a>
+                <a class="nav-item" href="profile-admin.html">Mi perfil</a>
+                <button class="nav-item nav-logout" id="logout-button" type="button">Cerrar sesión</button>
+            </nav>
+
+            <div class="sidebar-summary">
+                <p>Resumen</p>
+                <div class="summary-metric">
+                    <strong>248</strong>
+                    <span>Contactos</span>
+                </div>
+                <div class="summary-metric">
+                    <strong>32</strong>
+                    <span>Favoritos</span>
+                </div>
+            </div>
+        </aside>
+
+        <main class="phonebook-main">
+            <header class="phonebook-header">
+                <div>
+                    <p class="phonebook-kicker">DIRECTORIO</p>
+                    <h1>Contactos</h1>
+                </div>
+
+                <div class="phonebook-header-actions">
+                    <label class="phonebook-search" aria-label="Buscar contacto">
+                        <span class="search-icon" aria-hidden="true"></span>
+                        <input type="search" placeholder="Buscar contacto..." autocomplete="off">
+                    </label>
+                    <button class="phonebook-button phonebook-button--primary" type="button">+ Nuevo contacto</button>
+                </div>
+            </header>
+
+            <section class="phonebook-stats" aria-label="Estadísticas de contactos">
+                <article class="stat-card stat-card--accent">
+                    <span>Total</span>
+                    <strong>248</strong>
+                </article>
+                <article class="stat-card">
+                    <span>Favoritos</span>
+                    <strong>32</strong>
+                </article>
+                <article class="stat-card">
+                    <span>Emergencias</span>
+                    <strong>08</strong>
+                </article>
+            </section>
+
+            <section class="contacts-panel" aria-label="Lista de contactos">
+                <article class="contact-card selected">
+                    <div class="contact-avatar" data-tone="0">MA</div>
+                    <div class="contact-copy">
+                        <h3>María Álvarez</h3>
+                        <p>+57 300 123 4567</p>
+                        <span class="contact-badge">Familia</span>
+                    </div>
+                    <div class="contact-actions">
+                        <button type="button">Llamar</button>
+                        <button type="button">Mensaje</button>
+                    </div>
+                </article>
+
+                <article class="contact-card">
+                    <div class="contact-avatar" data-tone="1">JR</div>
+                    <div class="contact-copy">
+                        <h3>José Ramírez</h3>
+                        <p>+57 311 987 6543</p>
+                        <span class="contact-badge contact-badge--work">Trabajo</span>
+                    </div>
+                    <div class="contact-actions">
+                        <button type="button">Llamar</button>
+                        <button type="button">Mensaje</button>
+                    </div>
+                </article>
+
+                <article class="contact-card">
+                    <div class="contact-avatar" data-tone="2">LC</div>
+                    <div class="contact-copy">
+                        <h3>Lucía Cárdenas</h3>
+                        <p>+57 315 456 8899</p>
+                        <span class="contact-badge contact-badge--favorite">Favorito</span>
+                    </div>
+                    <div class="contact-actions">
+                        <button type="button">Llamar</button>
+                        <button type="button">Mensaje</button>
+                    </div>
+                </article>
+
+                <article class="contact-card">
+                    <div class="contact-avatar" data-tone="3">EA</div>
+                    <div class="contact-copy">
+                        <h3>Emergencias</h3>
+                        <p>+57 123 456 7890</p>
+                        <span class="contact-badge contact-badge--alert">Urgente</span>
+                    </div>
+                    <div class="contact-actions">
+                        <button type="button">Llamar</button>
+                        <button type="button">Mensaje</button>
+                    </div>
+                </article>
+            </section>
+        </main>
+
+    </div>
+    <script type="module" src="../js/logout.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f4f3ee">
+    <title>Mi perfil | Agenda</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="phonebook-body">
+    <div class="phonebook-shell profile-shell">
+        <aside class="phonebook-sidebar">
+            <a class="brand" href="../index.html" aria-label="Agenda, inicio">
+                <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+                agenda<span class="brand-period">.</span>
+            </a>
+
+            <nav class="phonebook-nav" aria-label="Navegación principal">
+                <a class="nav-item" href="notebook-admin.html">Agenda telefónica</a>
+                <a class="nav-item" href="users-admin.html">Usuarios</a>
+                <a class="nav-item active" href="profile-admin.html" aria-current="page">Mi perfil</a>
+                <button class="nav-item nav-logout" id="logout-button" type="button">Cerrar sesión</button>
+            </nav>
+
+            <div class="sidebar-summary users-sidebar-summary">
+                <p>Tu espacio</p>
+                <div class="summary-metric">
+                    <strong>Privado</strong>
+                    <span>Tu información se guarda en este navegador</span>
+                </div>
+            </div>
+        </aside>
+
+        <main class="phonebook-main profile-main">
+            <header class="users-page-header">
+                <div>
+                    <p class="phonebook-kicker">TU CUENTA</p>
+                    <h1>Mi perfil</h1>
+                    <p class="users-intro">Mantén tus datos personales al día.</p>
+                </div>
+                <span class="profile-state"><span aria-hidden="true"></span> Cuenta activa</span>
+            </header>
+
+            <section class="profile-hero" aria-label="Resumen del perfil">
+                <div class="profile-avatar" aria-hidden="true">DR</div>
+                <div class="profile-hero-copy">
+                    <p class="phonebook-kicker">PERFIL PERSONAL</p>
+                    <h2>¡Hola! 👋</h2>
+                    <p>Este es tu espacio para gestionar la información de tu cuenta.</p>
+                </div>
+                <div class="profile-hero-note">
+                    <span class="profile-note-icon" aria-hidden="true">✳</span>
+                    <span>Solo tú puedes ver esta información</span>
+                </div>
+            </section>
+
+            <section class="profile-card" aria-labelledby="personal-info-title">
+                <div class="profile-card-heading">
+                    <div>
+                        <p class="phonebook-kicker">INFORMACIÓN PERSONAL</p>
+                        <h2 id="personal-info-title">Tus datos</h2>
+                    </div>
+                    <span class="profile-edit-mark" aria-hidden="true">✎</span>
+                </div>
+
+                <div class="profile-fields">
+                    <label class="profile-field">
+                        Nombre completo
+                        <input type="text" value="Tu nombre" readonly>
+                    </label>
+                    <label class="profile-field">
+                        Correo electrónico
+                        <input type="email" value="tu@correo.com" readonly>
+                    </label>
+                    <label class="profile-field">
+                        Contraseña
+                        <input type="password" value="********" >
+                       
+                    </label>
+                    <label class="profile-switch-field">
+                        <span class="profile-switch-copy">
+                            <span>Estado de la cuenta</span>
+                            <small>Activa o pausa tu perfil</small>
+                        </span>
+                        <input class="profile-toggle-checkbox" type="checkbox" value="1" aria-label="Cuenta activa">
+                    </label>
+                </div>
+
+                <div class="profile-card-footer">
+                    <p>La edición del perfil estará disponible próximamente.</p>
+                    <button class="phonebook-button phonebook-button--primary" type="button" disabled>
+                        Guardar cambios
+                    </button>
+                </div>
+            </section>
+
+            <section class="profile-security-card" aria-label="Privacidad de la cuenta">
+                <span class="security-icon" aria-hidden="true">⌑</span>
+                <div>
+                    <h2>Tu privacidad, primero</h2>
+                    <p>Los datos de tu cuenta se almacenan localmente en este navegador.</p>
+                </div>
+                <span class="security-lock" aria-label="Información privada">Privado</span>
+            </section>
+        </main>
+    </div>
+    <script type="module" src="../js/logout.js"></script>
+</body>
+
+</html>
